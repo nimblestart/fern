@@ -3,9 +3,9 @@
 
 It’s (F)lowbite (E)leventy and (N)etlify … OK, and a few other things; it’s still _really_ small though.
 
-- [View on Netlify](https://fern.netlify.app/)
+[View on Netlify](https://fern.netlify.app/){:target="_blank"}
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fnimblestart%2Ffern.git) [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/nimblestart/fern)
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/nimblestart/fern)
 
 ## Goal
 
@@ -14,15 +14,15 @@ While learning how to use Eleventy, I came across [a few starter projects](https
 So, I made this and it seems to work 🤷‍♀️
 
 ## Frameworks Used
-1. [Eleventy](https://www.11ty.dev/)
-2. [Tailwind CSS](https://tailwindcss.com/)
-2. [Flowbite](https://flowbite.com/)
-2. [Netlify CMS](https://v1.netlifycms.org/)
+- [Eleventy](https://www.11ty.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Flowbite](https://flowbite.com/)
+- [Netlify CMS](https://v1.netlifycms.org/)
 
 ## 11ty Starters referenced
 
-1. [mesinkasir/eleventyblog](https://github.com/mesinkasir/eleventyblog)
-2. [marcamos/jet](https://github.com/marcamos/jet)
+- [mesinkasir/eleventyblog](https://github.com/mesinkasir/eleventyblog)
+- [marcamos/jet](https://github.com/marcamos/jet)
 
 ## How you can use it
 
