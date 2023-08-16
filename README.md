@@ -3,7 +3,8 @@
 
 It’s (F)lowbite (E)leventy and (N)etlify … OK, and a few other things; it’s still _really_ small though.
 
-[View on Netlify](https://fern.netlify.app/){:target="_blank"}
+<a href="https://fern.netlify.app/" target="_blank">View on Netlify</a>
+
 
 [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/nimblestart/fern)
 
