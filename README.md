@@ -20,12 +20,12 @@ So, I made this.
 
 ## 11ty Starters referenced
 
-- [mesinkasir/eleventyblog](https://github.com/mesinkasir/eleventyblog)
 - [marcamos/jet](https://github.com/marcamos/jet)
+- [mesinkasir/eleventyblog](https://github.com/mesinkasir/eleventyblog)
 
 ## How you can use it
 
-1. [Create your own new repo from jet’s template](https://github.com/nimblestart/fern/generate), or [clone this one](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+1. [Create your own new repo from FErN’s template](https://github.com/nimblestart/fern/generate), or [clone this one](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 2. Install dependencies: `npm i`
 3. Start development: `npm run dev`
 4. Visit http://localhost:8080 to see your work-in-progress

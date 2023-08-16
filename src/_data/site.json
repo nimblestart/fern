@@ -1,0 +1,11 @@
+{
+  "title": "FErN",
+  "url": "https://fern.netlify.app/",
+  "language": "en",
+  "description": "FErN is a template to create websites, it uses (F)lowbite, (E)leventy and (N)etlify, and a few other things; use it to create awesome websites.",
+  "author": {
+    "name": "Subhash",
+    "email": "test@gmail.com",
+    "url": "https://test.vercel.app"
+  }
+}
