@@ -1,10 +1,8 @@
-
 # FErN 🌿
 
-It’s (F)lowbite (E)leventy and (N)etlify … OK, and a few other things; it’s still _really_ small though.
+FErN is a template to create websites, it uses (F)lowbite, (E)leventy and (N)etlify, and a few other things; use it to create awesome websites.
 
-<a href="https://fern.netlify.app/" target="_blank">View on Netlify</a>
-
+[View on Netlify](https://fern.netlify.app/)
 
 [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/nimblestart/fern)
 
@@ -12,7 +10,7 @@ It’s (F)lowbite (E)leventy and (N)etlify … OK, and a few other things; it�
 
 While learning how to use Eleventy, I came across [a few starter projects](https://www.11ty.dev/docs/starter/), which are _amazing_, but none of gave me complete package to build out a site quickly.
 
-So, I made this and it seems to work 🤷‍♀️
+So, I made this.
 
 ## Frameworks Used
 - [Eleventy](https://www.11ty.dev/)
