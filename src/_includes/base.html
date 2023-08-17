@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="{{site.description}}"
+      content="{{metadata.description}}"
     />
-    <title>{{ site.title }}</title>
+    <title>{{ metadata.title }}</title>
     <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
   </head>
   <body>
     {% include "./partials/header_snippet.html" %}
@@ -17,5 +19,16 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
     <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>

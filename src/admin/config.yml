@@ -1,0 +1,99 @@
+backend:
+  # Use netlify identity as backend
+  name: git-gateway
+  branch: master
+  ### enable below lines for github integration ###
+  # name: github
+  # repo: surjithctly/neat-starter
+media_folder: "src/static/img"
+public_folder: "/static/img"
+
+# Please run "npx netlify-cms-proxy-server" for local backend
+local_backend: true
+# publish_mode: editorial_workflow
+collections:
+  - label: "Site Settings"
+    name: "settings"
+    editor:
+      preview: false
+    files:
+      - label: "Navigation"
+        name: "items"
+        file: "src/_data/navigation.json"
+        fields:
+          - label: Nav Items
+            name: items
+            widget: list
+            allow_add: true
+            collapsed: true
+            fields:
+              - { label: Title, name: text, widget: string }
+              - { label: URL, name: url, widget: string }
+      - label: "Social Info"
+        name: "links"
+        file: "src/_data/social_info.json"
+        fields:
+          - label: Social Items
+            name: items
+            widget: list
+            collapsed: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: URL, name: url, widget: string }
+              - { label: Description, name: desc, widget: string }
+      - label: "Meta Data"
+        name: "settings"
+        file: "src/_data/metadata.json"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string", required: false}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Site Url", name: "url", widget: "string"}
+          - {label: "Github Url", name: "githubUrl", widget: "string"}
+          - {label: "Author Name", name: "author_name", widget: string }
+          - {label: "Author eMail", name: "author_email", widget: string }
+          - {label: "Enable search", name: "enableSearch", widget: "boolean"}
+          - {label: "Enable darkmode", name: "enableDarkMode", widget: "boolean"}
+  - label: "Entity Data"
+    name: "entity"
+    editor:
+      preview: false
+    files:
+      - label: "Team"
+        name: "members"
+        file: "src/_data/team.json"
+        fields:
+          - label: Team Members
+            name: members
+            widget: list
+            allow_add: true
+            collapsed: true
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: About Me, name: about, widget: string }
+              - { label: Image URL, name: img_url, widget: string }
+      - label: "Services"
+        name: "services"
+        file: "src/_data/services.json"
+        fields:
+          - label: Services
+            name: items
+            widget: list
+            collapsed: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: desc, widget: string }
+      - label: "Meta Data"
+        name: "settings"
+        file: "src/_data/metadata.json"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string", required: false}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Site Url", name: "url", widget: "string"}
+          - {label: "Github Url", name: "githubUrl", widget: "string"}
+          - {label: "Author Name", name: "author_name", widget: string }
+          - {label: "Author eMail", name: "author_email", widget: string }
+          - {label: "Enable search", name: "enableSearch", widget: "boolean"}
+          - {label: "Enable darkmode", name: "enableDarkMode", widget: "boolean"}          

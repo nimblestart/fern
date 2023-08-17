@@ -16,11 +16,12 @@ So, I made this.
 - [Eleventy](https://www.11ty.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Flowbite](https://flowbite.com/)
-- [Netlify CMS](https://v1.netlifycms.org/)
+- [Decap (formerly known as Netlify CMS)](https://decapcms.org/)
 
 ## 11ty Starters referenced
 
 - [marcamos/jet](https://github.com/marcamos/jet)
+- [danurbanowicz/eleventy-netlify-boilerplate](https://github.com/danurbanowicz/eleventy-netlify-boilerplate)
 - [mesinkasir/eleventyblog](https://github.com/mesinkasir/eleventyblog)
 
 ## How you can use it

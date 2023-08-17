@@ -1,0 +1,11 @@
+{
+  "author_email": "test@test.com",
+  "enableSearch": true,
+  "name": "FErN",
+  "githubUrl": "https://github.com/nimblestart/fern",
+  "url": "https://fern.netlify.app/",
+  "title": "FErN",
+  "enableDarkMode": true,
+  "description": "FErN is a template to create websites, it uses (F)lowbite, (E)leventy and (N)etlify, and a few other things; use it to create awesome websites.",
+  "author_name": "Subhash Payal"
+}
