@@ -5,18 +5,34 @@ backend:
   ### enable below lines for github integration ###
   # name: github
   # repo: surjithctly/neat-starter
-media_folder: "src/static/img"
-public_folder: "/static/img"
+media_folder: "src/img"
+public_folder: "/img"
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
+
 # publish_mode: editorial_workflow
+
 collections:
   - label: "Site Settings"
     name: "settings"
+    description: General site settings.
     editor:
       preview: false
     files:
+      - label: "Meta Data"
+        name: "metadata"
+        file: "src/_data/metadata.json"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string", required: false}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Site Url", name: "url", widget: "string"}
+          - {label: "Github Url", name: "githubUrl", widget: "string"}
+          - {label: "Author Name", name: "author_name", widget: string }
+          - {label: "Author eMail", name: "author_email", widget: string }
+          - {label: "Enable search", name: "enableSearch", widget: "boolean"}
+          - {label: "Enable darkmode", name: "enableDarkMode", widget: "boolean"}
       - label: "Navigation"
         name: "items"
         file: "src/_data/navigation.json"
@@ -29,40 +45,67 @@ collections:
             fields:
               - { label: Title, name: text, widget: string }
               - { label: URL, name: url, widget: string }
-      - label: "Social Info"
-        name: "links"
-        file: "src/_data/social_info.json"
+  - label: "Organization Data"
+    name: "organization"
+    description: Information about the business/organization.
+    editor:
+      preview: false
+    files:
+      - label: "Primary Information"
+        name: "primary_info"
+        file: "src/_data/primary_info.json"
         fields:
-          - label: Social Items
+          - { label: Name, name: name, widget: string }
+          - { label: eMail, name: email, widget: string }
+          - { label: Phone, name: phone, widget: string }
+      - label: "Address"
+        name: "address"
+        file: "src/_data/address.json"
+        fields:
+          - label: Address
+            name: address
+            widget: object
+            fields:
+              - { label: Line 1, name: line1, widget: string }
+              - { label: Line 2, name: line2, widget: string }
+              - { label: City, name: city, widget: string }
+              - { label: State, name: state, widget: string }
+              - { label: Zip, name: zip, widget: string }
+              - { label: Map Link, name: map, widget: string }
+      - label: "Hours of Operation"
+        name: "hours"
+        file: "src/_data/hours.json"
+        fields:
+          - label: Hour Items
             name: items
             widget: list
-            collapsed: false
+            collapsed: true
+            fields:
+              - { label: Detail, name: detail, widget: string }
+      - label: "Social Links"
+        name: "social_links"
+        file: "src/_data/social_links.json"
+        fields:
+          - label: Social Link Items
+            name: items
+            widget: list
+            collapsed: true
             fields:
               - { label: Title, name: title, widget: string }
               - { label: URL, name: url, widget: string }
               - { label: Description, name: desc, widget: string }
-      - label: "Meta Data"
-        name: "settings"
-        file: "src/_data/metadata.json"
-        fields:
-          - {label: "Name", name: "name", widget: "string"}
-          - {label: "Title", name: "title", widget: "string", required: false}
-          - {label: "Description", name: "description", widget: "string"}
-          - {label: "Site Url", name: "url", widget: "string"}
-          - {label: "Github Url", name: "githubUrl", widget: "string"}
-          - {label: "Author Name", name: "author_name", widget: string }
-          - {label: "Author eMail", name: "author_email", widget: string }
-          - {label: "Enable search", name: "enableSearch", widget: "boolean"}
-          - {label: "Enable darkmode", name: "enableDarkMode", widget: "boolean"}
-  - label: "Entity Data"
-    name: "entity"
+  - label: "Page Data"
+    name: "pages"
+    description: Data for the pages.
     editor:
       preview: false
     files:
-      - label: "Team"
-        name: "members"
+      - label: "Team Page"
+        name: "team"
         file: "src/_data/team.json"
         fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
           - label: Team Members
             name: members
             widget: list
@@ -73,27 +116,46 @@ collections:
               - { label: Title, name: title, widget: string }
               - { label: About Me, name: about, widget: string }
               - { label: Image URL, name: img_url, widget: string }
-      - label: "Services"
+      - label: "Services Page"
         name: "services"
         file: "src/_data/services.json"
         fields:
-          - label: Services
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - label: Service Items
             name: items
             widget: list
             collapsed: true
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Description, name: desc, widget: string }
-      - label: "Meta Data"
-        name: "settings"
-        file: "src/_data/metadata.json"
+      - label: "Gallery Page"
+        name: "gallery"
+        file: "src/_data/gallery.json"
         fields:
-          - {label: "Name", name: "name", widget: "string"}
-          - {label: "Title", name: "title", widget: "string", required: false}
-          - {label: "Description", name: "description", widget: "string"}
-          - {label: "Site Url", name: "url", widget: "string"}
-          - {label: "Github Url", name: "githubUrl", widget: "string"}
-          - {label: "Author Name", name: "author_name", widget: string }
-          - {label: "Author eMail", name: "author_email", widget: string }
-          - {label: "Enable search", name: "enableSearch", widget: "boolean"}
-          - {label: "Enable darkmode", name: "enableDarkMode", widget: "boolean"}          
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - label: Gallery Items
+            name: items
+            widget: list
+            collapsed: true
+            fields:
+              - { label: Image, name: image, widget: string }
+      - label: "Testimonials Page"
+        name: "testimonials"
+        file: "src/_data/testimonials.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - label: Gallery Items
+            name: items
+            widget: list
+            collapsed: true
+            fields:
+              - { label: Image, name: image, widget: string }
+      - label: "Contact Page"
+        name: "contact"
+        file: "src/_data/contact.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
