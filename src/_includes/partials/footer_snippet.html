@@ -4,40 +4,25 @@
       <div class="mb-6 md:mb-0">
         <a href="/" class="flex items-center">
           <img src=".././img/fern.jpg" class="mr-3 h-8" alt="{{ primary_info.name }} Logo" />
-          <span
-            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-            >{{ primary_info.name }}</span
-          >
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">{{ primary_info.name
+            }}</span>
         </a>
       </div>
 
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
-        >© 2023
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023
         <a href="/" class="hover:underline">{{ primary_info.name }}™</a>. All
         Rights Reserved.
       </span>
       <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
 
         {% for link in social_links.items %}
-        <a
-          href="{{ link.url }}" target="_blank"
-          class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-        >
-          <svg
-            class="w-5 h-5"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              fill-rule="evenodd"
-              d="{{ link.path_d }}"
-              clip-rule="evenodd"
-            />
+        <a href="{{ link.url }}" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="{{ link.path_d }}" clip-rule="evenodd" />
           </svg>
         </a>
         {% endfor %}
-  
+
       </div>
     </div>
   </div>
