@@ -34,5 +34,13 @@ So, I made this.
 6. When you’re done: `npm run build`
 7. Host your project somewhere ([Netlify](https://www.netlify.com/) and [Vercel](https://vercel.com/) are nice options)
 
+## Deacp (*formerly* Netlify) CMS configuration
+- Please refer to [Configuration Options](https://decapcms.org/docs/configuration-options/) present in the Decap website
+- Please run "npx netlify-cms-proxy-server" for local backend
+
 ## Contribution
 If you try it and find issues, or think of improvements, please [file an issue](https://github.com/nimblestart/fern/issues/new) and/or [create a pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+
+## Contribution
+- Image paths need to be fixed for CMS files
+- Add more details in readme on CMS config steps
