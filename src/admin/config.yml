@@ -14,37 +14,36 @@ local_backend: true
 # publish_mode: editorial_workflow
 
 collections:
-  - label: "Site Settings"
-    name: "settings"
-    description: General site settings.
-    editor:
-      preview: false
-    files:
-      - label: "Meta Data"
-        name: "metadata"
-        file: "src/_data/metadata.json"
-        fields:
-          - {label: "Name", name: "name", widget: "string"}
-          - {label: "Title", name: "title", widget: "string", required: false}
-          - {label: "Description", name: "description", widget: "string"}
-          - {label: "Site Url", name: "url", widget: "string"}
-          - {label: "Github Url", name: "githubUrl", widget: "string"}
-          - {label: "Author Name", name: "author_name", widget: string }
-          - {label: "Author eMail", name: "author_email", widget: string }
-          - {label: "Enable search", name: "enableSearch", widget: "boolean"}
-          - {label: "Enable darkmode", name: "enableDarkMode", widget: "boolean"}
-      - label: "Navigation"
-        name: "items"
-        file: "src/_data/navigation.json"
-        fields:
-          - label: Nav Items
-            name: items
-            widget: list
-            allow_add: true
-            collapsed: true
-            fields:
-              - { label: Title, name: text, widget: string }
-              - { label: URL, name: url, widget: string }
+#  - label: "Site Settings"
+#    name: "settings"
+#    description: General site settings.
+#    editor:
+#      preview: false
+#    files:
+#      - label: "Meta Data"
+#        name: "metadata"
+#        file: "src/_data/metadata.json"
+#        fields:
+#          - {label: "Name", name: "name", widget: "string"}
+#          - {label: "Title", name: "title", widget: "string", required: false}
+#          - {label: "Description", name: "description", widget: "string"}
+#          - {label: "Site Url", name: "url", widget: "string"}
+#          - {label: "Github Url", name: "githubUrl", widget: "string"}
+#          - {label: "Author Name", name: "author_name", widget: string }
+#          - {label: "Author eMail", name: "author_email", widget: string }
+#          - {label: "Enable darkmode", name: "enableDarkMode", widget: "boolean"}
+#      - label: "Navigation"
+#        name: "navigation"
+#        file: "src/_data/navigation.json"
+#        fields:
+#          - label: Nav Items
+#            name: items
+#            widget: list
+#            allow_add: true
+#            collapsed: true
+#            fields:
+#              - { label: Title, name: title, widget: string }
+#              - { label: URL, name: url, widget: string }
   - label: "Organization Data"
     name: "organization"
     description: Information about the business/organization.
@@ -62,16 +61,12 @@ collections:
         name: "address"
         file: "src/_data/address.json"
         fields:
-          - label: Address
-            name: address
-            widget: object
-            fields:
-              - { label: Line 1, name: line1, widget: string }
-              - { label: Line 2, name: line2, widget: string }
-              - { label: City, name: city, widget: string }
-              - { label: State, name: state, widget: string }
-              - { label: Zip, name: zip, widget: string }
-              - { label: Map Link, name: map, widget: string }
+          - { label: Line 1, name: line1, widget: string }
+          - { label: City, name: city, widget: string }
+          - { label: State, name: state, widget: string }
+          - { label: Zip, name: zip, widget: string }
+          - { label: Map URL, name: map_url, widget: string }
+          - { label: Direction URL, name: direction_url, widget: string }
       - label: "Hours of Operation"
         name: "hours"
         file: "src/_data/hours.json"
@@ -93,7 +88,7 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: URL, name: url, widget: string }
-              - { label: Description, name: desc, widget: string }
+              - { label: Path Variable d, name: path_d, widget: string }
   - label: "Page Data"
     name: "pages"
     description: Data for the pages.
@@ -105,7 +100,7 @@ collections:
         file: "src/_data/team.json"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
+          - { label: Intro, name: intro, widget: string }
           - label: Team Members
             name: members
             widget: list
@@ -121,7 +116,7 @@ collections:
         file: "src/_data/services.json"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
+          - { label: Intro, name: intro, widget: string }
           - label: Service Items
             name: items
             widget: list
@@ -134,28 +129,29 @@ collections:
         file: "src/_data/gallery.json"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
+          - { label: Intro, name: intro, widget: string }
           - label: Gallery Items
             name: items
             widget: list
             collapsed: true
             fields:
-              - { label: Image, name: image, widget: string }
+              - { label: URL, name: URL, widget: string }
+              - { label: Description, name: desc, widget: string }
       - label: "Testimonials Page"
         name: "testimonials"
         file: "src/_data/testimonials.json"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
-          - label: Gallery Items
+          - { label: Intro, name: intro, widget: string }
+          - label: Testimonial Items
             name: items
             widget: list
             collapsed: true
             fields:
-              - { label: Image, name: image, widget: string }
+              - { label: testimonial, name: testimonial, widget: string }
       - label: "Contact Page"
         name: "contact"
         file: "src/_data/contact.json"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
+          - { label: Intro, name: intro, widget: string }

@@ -1,20 +1,24 @@
 {
   "items": [
     {
-      "text": "dadad",
-      "url": "/adadad"
+      "title": "Home",
+      "url": "/"
     },
     {
-      "text": "sdadad",
-      "url": "/dadadad"
+      "title": "Services",
+      "url": "/services"
     },
     {
-      "text": "sdad",
-      "url": "/asdad"
+      "title": "Team",
+      "url": "/team"
     },
     {
-      "text": "dadad",
-      "url": "/asdadasd"
+      "title": "Gallery",
+      "url": "/gallery"
+    },
+    {
+      "title": "Contact",
+      "url": "/contact"
     }
   ]
 }

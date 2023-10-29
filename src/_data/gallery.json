@@ -1,0 +1,30 @@
+{
+  "title": "Our Gallery",
+  "intro": "Explore the activities of our team while they are not working",
+  "items": [
+    {
+      "URL": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Karelian-Bear-Dog-Canis-lupus-familiaris.jpg",
+      "desc": "office content 1"
+    },
+    {
+      "URL": "https://upload.wikimedia.org/wikipedia/commons/5/53/Stamp_of_Ajman_-_1971_-_Colnect_492636_-_Belka_-_Canis_lupus_familiaris.jpeg",
+      "desc": "office content 2"
+    },
+    {
+      "URL": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Stamp_of_Belarus_-_2010_-_Colnect_199374_-_Irish_Setter_Canis_lupus_familiaris.jpeg",
+      "desc": "office content 3"
+    },
+    {
+      "URL": "https://upload.wikimedia.org/wikipedia/commons/5/57/Stamp_of_Belarus_-_2010_-_Colnect_199375_-_Siberian_Laika_Canis_lupus_familiaris.jpeg",
+      "desc": "office content 4"
+    },
+    {
+      "URL": "https://upload.wikimedia.org/wikipedia/commons/8/80/Stamp_of_Ajman_-_1971_-_Colnect_492633_-_German_Shepherd_Canis_lupus_familiaris.jpeg",
+      "desc": "office content 5"
+    },
+    {
+      "URL": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Stamp_of_Finland_-_1989_-_Colnect_47249_-_Finnish_Spitz_Canis_lupus_familiaris.jpeg",
+      "desc": "office content 6"
+    }
+  ]
+}

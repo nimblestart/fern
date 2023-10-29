@@ -1,0 +1,33 @@
+<div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">    
+<div class="flex flex-col md:flex-row gap-4 md:gap-36 justify-center">
+  <div class="grid gap-2">
+    <div class="flex flex-col">
+      <p class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Phone</p>
+      <p class="text-sm text-gray-900 dark:text-gray-300">{{ primary_info.phone }}</p>
+    </div>
+    <div class="flex flex-col">
+      <p class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email</p>
+      <p class="text-sm text-gray-900 dark:text-gray-300">{{ primary_info.email }}</p>
+    </div>
+    <div class="flex flex-col">
+      <p class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Address</p>
+      <p class="text-sm text-gray-900 dark:text-gray-300">{{ address.line1 }}</p>
+      <p class="text-sm text-gray-900 dark:text-gray-300">{{ address.city }}</p>
+      <p class="text-sm text-gray-900 dark:text-gray-300">{{ address.state }}, {{ address.zip }}</p>
+    </div>
+    <div class="flex flex-col">
+      <p class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Hours</p>
+
+      {% for hour in hours.items %}
+      <p class="text-sm text-gray-900 dark:text-gray-300">{{ hour.detail }}</p>
+      {% endfor %}
+  
+    </div>
+  </div>
+
+  <div> <iframe
+      src={{ address.map_url }}
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</div>
+</div>

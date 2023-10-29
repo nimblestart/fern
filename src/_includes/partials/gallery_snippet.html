@@ -3,42 +3,20 @@
     <h2
       class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
     >
-      Our Gallery
+    {{ gallery.title }}
     </h2>
     <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
-      Explore the activities of our team while they are not working
+      {{ gallery.intro }}
     </p>
   </div>
   <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-    <img
-      class="w-11/12 rounded-lg col-span-2 mb-1"
-      src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Karelian-Bear-Dog-Canis-lupus-familiaris.jpg"
-      alt="office content 1"
-    />
-    <img
-      class="w-full rounded-lg mb-1"
-      src="https://upload.wikimedia.org/wikipedia/commons/5/53/Stamp_of_Ajman_-_1971_-_Colnect_492636_-_Belka_-_Canis_lupus_familiaris.jpeg"
-      alt="office content 2"
-    />
-    <img
-      class="w-full rounded-lg mb-1"
-      src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Stamp_of_Belarus_-_2010_-_Colnect_199374_-_Irish_Setter_Canis_lupus_familiaris.jpeg"
-      alt="office content 2"
-    />
-    <img
-      class="w-full rounded-lg mb-1"
-      src="https://upload.wikimedia.org/wikipedia/commons/5/57/Stamp_of_Belarus_-_2010_-_Colnect_199375_-_Siberian_Laika_Canis_lupus_familiaris.jpeg"
-      alt="office content 2"
-    />
-    <img
-      class="w-full rounded-lg mb-1"
-      src="https://upload.wikimedia.org/wikipedia/commons/8/80/Stamp_of_Ajman_-_1971_-_Colnect_492633_-_German_Shepherd_Canis_lupus_familiaris.jpeg"
-      alt="office content 2"
-    />
-    <img
-      class="w-11/12 rounded-lg col-span-2 mb-1"
-      src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Stamp_of_Finland_-_1989_-_Colnect_47249_-_Finnish_Spitz_Canis_lupus_familiaris.jpeg"
-      alt="office content 2"
-    />
+
+    {% for image in gallery.items %}
+      <img
+        class="w-11/12 rounded-lg col-span-2 mb-1"
+        src={{image.URL}}
+        alt={{image.desc}}
+      />
+    {% endfor %}
   </div>
 </div>
